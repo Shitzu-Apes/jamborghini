@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jamborghini — Jambo Run (Three.js)</title>
+    <link rel="icon" type="image/webp" href="favicon.webp" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Controls overlay -->
+    <div id="controls-overlay" class="controls-overlay">
+      <div class="controls-content">
+        <h2>🏎️ JAMBORGHINI</h2>
+        <p class="subtitle">The 2nd Centralized DEX Racing Experience</p>
+
+        <div class="controls-section">
+          <h3>🎮 CONTROLS</h3>
+          <div class="control-grid">
+            <div class="control-item">
+              <span class="control-key">←→</span>
+              <span class="control-desc">Switch Lanes</span>
+            </div>
+            <div class="control-item">
+              <span class="control-key">A/D</span>
+              <span class="control-desc">Alternative Steering</span>
+            </div>
+            <div class="control-item">
+              <span class="control-key">📱</span>
+              <span class="control-desc">Tap Left/Right (Mobile)</span>
+            </div>
+            <div class="control-item">
+              <span class="control-key">SPACE</span>
+              <span class="control-desc">Restart Game</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls-section">
+          <h3>🎯 OBJECTIVES</h3>
+          <div class="objective-list">
+            <div class="objective">
+              <img src="coin.webp" alt="JAMBO coin" class="objective-icon" />
+              Collect $JAMBO coins (+carry score)
+            </div>
+            <div class="objective">🏁 Hit blue checkpoints to BANK coins</div>
+            <div class="objective">
+              🛡️ Grab shields for temporary protection
+            </div>
+            <div class="objective">
+              🚛 Dodge Migration trucks & Custody cones
+            </div>
+          </div>
+        </div>
+
+        <div class="controls-section">
+          <h3>🚗 CHOOSE YOUR RIDE</h3>
+          <div class="car-picker">
+            <div class="car-option selected" data-car="jamborghini">
+              <img src="jamborghini.webp" alt="Jamborghini" class="car-image" />
+              <div class="car-name">Jamborghini</div>
+              <div class="car-desc">Classic Sports</div>
+            </div>
+            <div class="car-option" data-car="jambosuv">
+              <img src="jambosuv.webp" alt="Jambo SUV" class="car-image" />
+              <div class="car-name">Jambo SUV</div>
+              <div class="car-desc">All-Terrain</div>
+            </div>
+            <div class="car-option" data-car="jambmw">
+              <img src="jambmw.webp" alt="JamBMW" class="car-image" />
+              <div class="car-name">JamBMW</div>
+              <div class="car-desc">Luxury Sedan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls-section">
+          <h3>⚠️ JAMBO MECHANICS</h3>
+          <div class="mechanic-list">
+            <div class="mechanic">
+              💼 <strong>Manual Settlement:</strong> Unbanked coins lost on
+              crash
+            </div>
+
+            <div class="mechanic">
+              🏦 <strong>Custody Risk:</strong> Must actively bank at
+              checkpoints
+            </div>
+          </div>
+        </div>
+
+        <button id="start-game" class="start-btn">START DRIVING 🚗💨</button>
+        <p class="disclaimer">
+          Pure entertainment value • No guaranteed utility • DYOR
+        </p>
+      </div>
+    </div>
+
+    <!-- Game HUD -->
+    <div class="hud">
+      <div>🏁 <span id="dist">0</span> m</div>
+      <div>🪙 <span id="banked">0</span> banked</div>
+      <div>💼 <span id="carry">0</span> carry</div>
+
+      <button id="show-controls" class="help-btn">?</button>
+    </div>
+
+    <!-- Game Over Dialog -->
+    <div id="game-over-overlay" class="game-over-overlay" style="display: none">
+      <div class="game-over-content">
+        <h2>🏁 GAME OVER</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-label">Distance</div>
+            <div class="stat-value" id="final-dist">0 m</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">$JAMBO Banked</div>
+            <div class="stat-value" id="final-banked">0</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Coins Lost</div>
+            <div class="stat-value" id="final-lost">0</div>
+          </div>
+        </div>
+
+        <div class="game-over-actions">
+          <button id="copy-score" class="action-btn copy-btn">
+            📷 Copy as Image
+          </button>
+          <button id="share-score" class="action-btn share-btn">
+            🐦 Share on X
+          </button>
+          <button id="play-again" class="action-btn restart-btn">
+            🚗 Play Again
+          </button>
+        </div>
+
+        <p class="game-over-disclaimer">
+          Pure entertainment value • No guaranteed utility • DYOR
+        </p>
+      </div>
+    </div>
+
+    <canvas id="c"></canvas>
+
+    <!-- Three.js as ES module -->
+    <script
+      type="module"
+      src="https://unpkg.com/three@0.160.0/build/three.module.js"
+    ></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
