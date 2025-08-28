@@ -851,7 +851,9 @@ ui.shareScore.onclick = () => {
 
 Get JAMBO -> Buy Lambo 🚗💨
 
-Play at jamborghini.meme.cooking
+🎮 Play: jamborghini.meme.cooking
+💎 Buy on Meme.Cooking: meme.cooking/meme/1679
+🐋 Buy on Orca: orca.so/?tokenIn=So11111111111111111111111111111111111111112&tokenOut=2cMYUjUQJzrTcnxrD8JgL1BQL1AQKCtRkYLdmaTpCWYB
 
 #JAMBORGHINI`;
   
