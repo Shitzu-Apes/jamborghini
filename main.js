@@ -851,6 +851,8 @@ ui.shareScore.onclick = () => {
 
 Get JAMBO -> Buy Lambo 🚗💨
 
+Play at jamborghini.meme.cooking
+
 #JAMBORGHINI`;
   
   const url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text);
