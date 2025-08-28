@@ -823,7 +823,7 @@ ui.copyScore.onclick = async () => {
     ctx.textAlign = 'center';
     ctx.fillText('JAMBO Exchange - Pure Entertainment Value', canvas.width/2, 580);
     ctx.fillText('No guaranteed utility • DYOR', canvas.width/2, 600);
-    ctx.fillText('Play at jamborghini.near', canvas.width/2, 620);
+    ctx.fillText('Play at jamborghini.meme.cooking', canvas.width/2, 620);
     
     // Copy to clipboard
     canvas.toBlob(async (blob) => {
